@@ -1,0 +1,6 @@
+D:\GitHub\mozzios\Sitecore.SingleSignOn\Sitecore.SingleSignOn.Utility\bin\Debug\Sitecore.SingleSignOn.Utility.dll
+D:\GitHub\mozzios\Sitecore.SingleSignOn\Sitecore.SingleSignOn.Utility\bin\Debug\Sitecore.SingleSignOn.Utility.pdb
+D:\GitHub\mozzios\Sitecore.SingleSignOn\Sitecore.SingleSignOn.Utility\obj\Debug\Sitecore.SingleSignOn.Utility.csprojResolveAssemblyReference.cache
+D:\GitHub\mozzios\Sitecore.SingleSignOn\Sitecore.SingleSignOn.Utility\obj\Debug\Sitecore.SingleSignOn.Utility.csproj.CoreCompileInputs.cache
+D:\GitHub\mozzios\Sitecore.SingleSignOn\Sitecore.SingleSignOn.Utility\obj\Debug\Sitecore.SingleSignOn.Utility.dll
+D:\GitHub\mozzios\Sitecore.SingleSignOn\Sitecore.SingleSignOn.Utility\obj\Debug\Sitecore.SingleSignOn.Utility.pdb

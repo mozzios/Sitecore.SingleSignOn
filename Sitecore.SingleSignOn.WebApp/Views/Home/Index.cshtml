@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Sitecore Single Sign On</h1>
+    <p class="lead">Logged in as <strong>@HttpContext.Current.User.Identity.Name</strong></p>
+    <p class="lead">Login method: <strong>@HttpContext.Current.User.Identity.AuthenticationType</strong></p>
+    <p><a href="/Account/Logoff" class="btn btn-danger btn-lg">Logout &raquo;</a></p>
+</div>
