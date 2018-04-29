@@ -41,7 +41,7 @@ namespace Sitecore.SingleSignOn.WebApp.Controllers
 
                     if (memberModel == null)
                     {
-                        ModelState.AddModelError("", "Username or Password invalid");
+                        ModelState.AddModelError("", ErrorMessages.UsernamePasswordInvalid);
                         return View(model);
                     }
 
@@ -60,6 +60,7 @@ namespace Sitecore.SingleSignOn.WebApp.Controllers
             catch(Exception ex)
             {
                 LogHelper.WriteLog(StaticKeyHelper.WebApplication, StaticKeyHelper.Login, ex.Message);
+                ModelState.AddModelError("", ErrorMessages.TechnicalIssues);
                 return RedirectToAction("Login", "Account");
             }
         }
@@ -82,7 +83,7 @@ namespace Sitecore.SingleSignOn.WebApp.Controllers
                     IRegisterServices registerService = new RegisterServices();
                     if (registerService.IsUsernameExist(model))
                     {
-                        ModelState.AddModelError("", "Username is already taken");
+                        ModelState.AddModelError("", ErrorMessages.UsernameTaken);
                         return View(model);
                     }
 
@@ -90,7 +91,7 @@ namespace Sitecore.SingleSignOn.WebApp.Controllers
                     model.Password = encyptionHelper.EncryptString(model.Password, EncryptionTypeEnums.Member);
 
                     if (registerService.Register(model))
-                        return RedirectToAction("Account", "Login");
+                        return RedirectToAction("Login", "Account");
                 }
 
                 return View(model);
@@ -98,7 +99,8 @@ namespace Sitecore.SingleSignOn.WebApp.Controllers
             catch (Exception ex)
             {
                 LogHelper.WriteLog(StaticKeyHelper.WebApplication, StaticKeyHelper.Register, ex.Message);
-                return RedirectToAction("Account", "Login");
+                ModelState.AddModelError("", ErrorMessages.TechnicalIssues);
+                return RedirectToAction("Login", "Account");
             }
         }
 
