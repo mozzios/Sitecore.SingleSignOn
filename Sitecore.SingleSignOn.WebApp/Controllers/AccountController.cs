@@ -60,7 +60,7 @@ namespace Sitecore.SingleSignOn.WebApp.Controllers
             catch(Exception ex)
             {
                 LogHelper.WriteLog(StaticKeyHelper.WebApplication, StaticKeyHelper.Login, ex.Message);
-                return RedirectToAction("Account", "Login");
+                return RedirectToAction("Login", "Account");
             }
         }
 
